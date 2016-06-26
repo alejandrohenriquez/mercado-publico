@@ -1,0 +1,27 @@
+//
+   Created by ahenriquez on 24-06-16.
+
+.row
+  .col-md-8
+    .calendar(ui-calendar="uiConfig.calendar", ng-model="data")
+  .col-md-4
+    div(ng-if="data.day")
+      h3 {{ data.day.toDate() | date : 'dd/MM/yyyy' : 'UTC' }}
+
+      div(ng-if="data.events.length")
+        .table-responsive.small
+          table.table.table-striped
+            thead
+              tr
+                th.col-md-2 Cierre
+                th.col-md-10 Nombre
+            tbody
+              tr(ng-repeat="item in data.events")
+                td {{ item.start.toDate() | date : 'HH:mm' : 'UTC' }}
+                td {{ item.title }}
+
+      div(ng-if="data.events.length == 0")
+        .alert.alert-warning No hay licitaciones que
+          | concluyan este día
+    div(ng-if="!data.day")
+      .alert.alert-info Seleccione un día

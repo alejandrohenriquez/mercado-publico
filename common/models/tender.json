@@ -1,0 +1,36 @@
+{
+  "name": "tender",
+  "plural": "tenders",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "id": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "number"
+    },
+    "deadline": {
+      "type": "date",
+      "required": true,
+      "index": true
+    },
+    "create": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
