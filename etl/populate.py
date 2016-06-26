@@ -24,6 +24,8 @@ def main():
     destination_url = 'http://0.0.0.0:8080/api/tenders'
     check_url = 'http://0.0.0.0:8080/api/tenders/{0}/exists'
 
+    stats_url = 'http://0.0.0.0:8080/api/stats'
+
     stats = {
         'lines': 0,
         'save': 0,
@@ -59,8 +61,9 @@ def main():
                 stats['except'] += 1
                 print tender
     finally:
-        # TODO: guardas stats en la applicacion, en caso de error enviar un mail
-        print stats
+        # TODO: enviar un mail con los stats en caso de error
+        result = requests.post(stats_url, data=stats).json()
+        print result
 
 def options():
     parser = argparse.ArgumentParser(description='Importador de datos.')

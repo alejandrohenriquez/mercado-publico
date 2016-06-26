@@ -9,8 +9,8 @@
   "properties": {
     "code": {
       "type": "string",
-      "required": true,
-      "id": true
+      "id": true,
+      "required": true
     },
     "name": {
       "type": "string",

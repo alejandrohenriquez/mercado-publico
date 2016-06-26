@@ -1,0 +1,21 @@
+//
+   Created by ahenriquez on 26-06-16.
+
+.modal-header
+    h3.modal-title Detalle licitacion
+.modal-body
+    dl.dl-horizontal
+        dt Codigo Externo
+        dd {{ tender.code }}
+
+        dt Nombre
+        dd {{ tender.title }}
+
+        dt Codigo Estado
+        dd {{ tender.state }}
+
+        dt Fecha de Cierre
+        dd {{ tender.start | date : 'yyyy-MM-ddTHH:mm' : 'UTC' }}
+
+.modal-footer
+    button.btn.btn-warning(type='button', ng-click='cancel()') Cerrar

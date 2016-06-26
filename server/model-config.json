@@ -35,5 +35,9 @@
   "tender": {
     "dataSource": "mongo",
     "public": true
+  },
+  "stat": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

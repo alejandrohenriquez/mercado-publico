@@ -25,7 +25,8 @@ module.exports = function(Tender) {
           return {
             title: item.name,
             start: item.deadline,
-            state: item.state
+            state: item.state,
+            code: item.code
           }
         });
 

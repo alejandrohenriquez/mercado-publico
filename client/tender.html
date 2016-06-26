@@ -1,0 +1,2 @@
+<!--Created by ahenriquez on 26-06-16.
+--><div class="modal-header"><h3 class="modal-title">Detalle licitacion</h3></div><div class="modal-body"><dl class="dl-horizontal"><dt>Codigo Externo</dt><dd>{{ tender.code }}</dd><dt>Nombre</dt><dd>{{ tender.title }}</dd><dt>Codigo Estado</dt><dd>{{ tender.state }}</dd><dt>Fecha de Cierre</dt><dd>{{ tender.start | date : 'yyyy-MM-ddTHH:mm' : 'UTC' }}</dd></dl></div><div class="modal-footer"><button type="button" ng-click="cancel()" class="btn btn-warning">Cerrar</button></div>

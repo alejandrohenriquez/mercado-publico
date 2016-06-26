@@ -1,0 +1,28 @@
+{
+  "name": "stat",
+  "plural": "stats",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "lines": {
+      "type": "number",
+      "required": true
+    },
+    "save": {
+      "type": "number"
+    },
+    "exist": {
+      "type": "number"
+    },
+    "except": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
